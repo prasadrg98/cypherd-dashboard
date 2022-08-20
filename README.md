@@ -22,7 +22,9 @@ CypherD Home assignment on react native
 
 
 
-![Screenshot 2022-08-20 at 11 17 45 PM](https://user-images.githubusercontent.com/21031995/185759905-0b0f57d3-3a81-405c-9331-dd97c1726fda.png)
+![Screenshot 2022-08-20 at 11 47 55 PM](https://user-images.githubusercontent.com/21031995/185761030-563734fe-cf19-4b4a-a887-a2c6788d4c44.png)
+
+
 
 
 
@@ -36,9 +38,11 @@ CypherD Home assignment on react native
 
 
 
-![Screenshot 2022-08-20 at 11 18 04 PM](https://user-images.githubusercontent.com/21031995/185759907-a87fbab2-4fa0-466e-baf7-af1bcf1caba0.png)
 
 
+
+
+![Screenshot 2022-08-20 at 11 48 04 PM](https://user-images.githubusercontent.com/21031995/185761041-bbe1ccfe-778a-4eea-89b8-644a371dbd0b.png)
 
 
 
@@ -53,4 +57,9 @@ CypherD Home assignment on react native
 
 
 
-![Screenshot 2022-08-20 at 11 18 14 PM](https://user-images.githubusercontent.com/21031995/185759909-4b098892-4afa-4412-9309-967d3f3b7e4a.png)
+
+
+![Screenshot 2022-08-20 at 11 48 11 PM](https://user-images.githubusercontent.com/21031995/185761067-9dbc95bf-d0f0-43f5-ad2a-7fe17ece7e49.png)
+
+
+
