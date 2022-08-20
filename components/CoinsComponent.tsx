@@ -1,12 +1,17 @@
 import { View, Text, Image, StyleSheet } from 'react-native'
 import React from 'react'
-import { CoinType } from "../types";
 
 
-export const CoinsComponent = ({coin}) => {
+export const CoinsComponent = ({coin}: any) => {
   return (
         <View style={styles.singleCoin}>
-            <Image style={styles.logoImage} source={{uri: coin.logo_url}}></Image>
+            <View>
+                <Image style={styles.logoImage} source={{uri: coin.logo_url}}></Image>
+                <Image style={styles.logoSuffixImage} source={{uri: coin.logo_url}}></Image>
+            </View>
+            {/* <View>
+                
+            </View> */}
             <View style={styles.coinNameSymbolContainer}>
                 <Text style={styles.coinName} >{coin.name}</Text>
                 <Text style={styles.coinSymbol} >{coin.symbol}</Text>
@@ -46,7 +51,7 @@ const styles = StyleSheet.create({
         paddingLeft: "16px",
     },
     coinNameSymbolContainer:{
-        
+        paddingLeft:6
     },
     coinPriceContainer:{
         flex:1,
@@ -57,7 +62,6 @@ const styles = StyleSheet.create({
     },
     coinTotal:{
         textAlign: "right",
-        fontSize: 13,
         fontWeight: "bold",
         fontSize: 17,
         paddingTop: 7,
@@ -67,5 +71,13 @@ const styles = StyleSheet.create({
         textAlign: "right",
         color: "#b1b1b1",
         paddingBottom: 10
-    }
+    },
+    logoSuffixImage:{
+        // position: 'absolute',
+        height: 20,
+        width: 20,
+        left: 38,
+        bottom: 8,
+        borderRadius: 100,
+       }
 })

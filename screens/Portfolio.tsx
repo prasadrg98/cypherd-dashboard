@@ -13,7 +13,7 @@ const Portfolio = () => {
     const [verified, setVerified] = useState(true)
     const [coinChains, setcoinChains] = useState([])
 
-    const update_coins = (coinChainsArr) => {
+    const update_coins = (coinChainsArr: any) => {
         let coins_array: CoinType[] = [];
         for (let chain of coinChainsArr) {
             for (let coin of chain.token_holdings) {
@@ -44,7 +44,7 @@ const Portfolio = () => {
 
     return (
         <View>
-            <LoadWalletComponent/>
+            <LoadWalletComponent coinChains={coinChains}/>
             <View style={styles.middleContainer}>
                 <View style={styles.lastUpdatedContainer}>
                     <Text>Last Updated: 4 Mins Ago</Text>
@@ -61,7 +61,7 @@ const Portfolio = () => {
             <View style={{height: "77.5vh"}}>
                 <View style={styles.coinsContainer}>
                 {
-                    Coins.map((coin, index) => (
+                    Coins.map((coin: CoinType, index) => (
                         <CoinsComponent key={index} coin={coin}/>
                     ))
                 }

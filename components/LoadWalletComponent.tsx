@@ -1,12 +1,21 @@
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native'
 import React from 'react'
 
-export const LoadWalletComponent = () => {
+export const LoadWalletComponent = ({coinChains}: any) => {
+
+  const calculate_total_balance = () => {
+    let total_balance = 0
+    for (let chain of coinChains){
+        total_balance += +(chain.total_value)
+    }
+    return total_balance
+  }
+
   return (
     <View style={styles.topContainer}>
         <View style={styles.loadWalletSection}>
             <Text style={styles.totalBalanceDesc}>Total Balance</Text>
-            <Text style={styles.totalBalancePrice}>$89.97</Text>
+            <Text style={styles.totalBalancePrice}>${calculate_total_balance()}</Text>
             <TouchableOpacity style={styles.LoadWalletButton}>
                 <Text style={{marginLeft:17, paddingBottom:4, fontWeight: 'bold',}}>Load Wallet</Text>
             </TouchableOpacity>
@@ -15,7 +24,7 @@ export const LoadWalletComponent = () => {
             
         </View> */}
         <View style={{...styles.walletImageSection}}>
-            <Image style={styles.sideImage} source={require("../assets/images/wallet_image.png")}></Image>
+            <ImageBackground style={styles.sideImage} source={require("../assets/images/wallet_image.png")}/>
         </View>
         
       
@@ -53,21 +62,19 @@ const styles = StyleSheet.create({
         height: 40,
         width: 115 ,
         borderRadius: 50,
-        marginLeft: 15,
+        marginLeft: 10,
         backgroundColor: "#f5b445",
         justifyContent: 'center',
     },
     sideImage:{
         height: 161,
         width: 252
-        // height: 161px;
-        // width: 252px;
     },
     walletImageSection: {
-        // width: 100,
         backgroundColor:'#f3e0be',
         paddingTop: 10,
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
+        textAlign: 'right'
 
     }
 
