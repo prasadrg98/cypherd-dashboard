@@ -25,11 +25,28 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> = Nati
 >;
 
 export type RootTabParamList = {
-  TabOne: undefined;
-  TabTwo: undefined;
+  Browser: undefined;
+  Portfolio: undefined;
+  Shortcuts: undefined;
+  Options: undefined;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
   BottomTabScreenProps<RootTabParamList, Screen>,
   NativeStackScreenProps<RootStackParamList>
 >;
+
+export type CoinType = {
+    about: string,
+    actual_balance: number,
+    balance: number,
+    coin_gecko_id: string,
+    contract_address: string,
+    contract_decimals: string,
+    is_verified: boolean,
+    logo_url: string,
+    name: string,
+    price: number,
+    symbol: string,
+    total_value: number
+}
