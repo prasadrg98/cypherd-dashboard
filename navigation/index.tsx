@@ -20,6 +20,10 @@ import Portfolio from '../screens/portfolio';
 import Shortcuts from '../screens/Shortcuts';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import { Ionicons } from '@expo/vector-icons'; 
+import { Feather } from '@expo/vector-icons'; 
+import { FontAwesome5 } from '@expo/vector-icons'; 
+
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
     return (
@@ -69,7 +73,7 @@ function BottomTabNavigator() {
                 component={Browser}
                 options={({ navigation }: RootTabScreenProps<'Browser'>) => ({
                     title: 'Browser',
-                    tabBarIcon: ({ color }) => <TabBarIcon name='edge' color={color}></TabBarIcon>
+                    tabBarIcon: ({ color }) => <FontAwesome5 name="firefox-browser" size={24} color="black" />
                 })}
             />
             <BottomTab.Screen
@@ -77,7 +81,7 @@ function BottomTabNavigator() {
                 component={Portfolio}
                 options={({ navigation }: RootTabScreenProps<'Portfolio'>) => ({
                     title: 'Portfolio',
-                    tabBarIcon: ({ color }) => <TabBarIcon name='pie-chart' color={color}></TabBarIcon>
+                    tabBarIcon: ({ color }) => <Feather name="pie-chart" size={24} color="black" />
                 })}
             />
             <BottomTab.Screen
@@ -85,7 +89,7 @@ function BottomTabNavigator() {
                 component={Shortcuts}
                 options={({ navigation }: RootTabScreenProps<'Shortcuts'>) => ({
                     title: 'Shortcuts',
-                    tabBarIcon: ({ color }) => <TabBarIcon name='sitemap' color={color}></TabBarIcon>
+                    tabBarIcon: ({ color }) => <FontAwesome5 name='sitemap' size={24} color="black"></FontAwesome5>
                 })}
             />
             <BottomTab.Screen
@@ -93,7 +97,7 @@ function BottomTabNavigator() {
                 component={Options}
                 options={({ navigation }: RootTabScreenProps<'Options'>) => ({
                     title: 'Options',
-                    tabBarIcon: ({ color }) => <TabBarIcon name='dot-circle-o' color={color}></TabBarIcon>
+                    tabBarIcon: ({ color }) => <Ionicons name="options" size={24} color="black" />
                 })}
             />
 

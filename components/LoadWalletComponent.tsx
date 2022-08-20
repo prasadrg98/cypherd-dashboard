@@ -20,11 +20,9 @@ export const LoadWalletComponent = ({coinChains}: any) => {
                 <Text style={{marginLeft:17, paddingBottom:4, fontWeight: 'bold',}}>Load Wallet</Text>
             </TouchableOpacity>
         </View>
-        {/* <View>
-            
-        </View> */}
         <View style={{...styles.walletImageSection}}>
-            <ImageBackground style={styles.sideImage} source={require("../assets/images/wallet_image.png")}/>
+            <ImageBackground style={styles.sideImage} source={require("../assets/images/wallet_image.png")}>
+            </ImageBackground>
         </View>
         
       
@@ -41,7 +39,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         backgroundColor: '#f3e0be',
-        paddingTop: '50px',
+        paddingTop: '80px',
         paddingBottom: '30px',
         paddingLeft: '10px',
         justifyContent: "space-between",
@@ -77,5 +75,4 @@ const styles = StyleSheet.create({
         textAlign: 'right'
 
     }
-
 })

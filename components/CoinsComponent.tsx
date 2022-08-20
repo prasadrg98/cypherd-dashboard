@@ -7,11 +7,7 @@ export const CoinsComponent = ({coin}: any) => {
         <View style={styles.singleCoin}>
             <View>
                 <Image style={styles.logoImage} source={{uri: coin.logo_url}}></Image>
-                <Image style={styles.logoSuffixImage} source={{uri: coin.logo_url}}></Image>
             </View>
-            {/* <View>
-                
-            </View> */}
             <View style={styles.coinNameSymbolContainer}>
                 <Text style={styles.coinName} >{coin.name}</Text>
                 <Text style={styles.coinSymbol} >{coin.symbol}</Text>

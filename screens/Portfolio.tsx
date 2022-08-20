@@ -5,6 +5,8 @@ import { get_coins } from "../services/apis";
 import { CoinType } from "../types";
 import { CoinsComponent } from '../components/CoinsComponent';
 import { LoadWalletComponent } from '../components/LoadWalletComponent';
+import { AllChainsComponent } from '../components/AllChainsComponent';
+
 const windowWidth = Dimensions.get("window").width;
 
 const Portfolio = () => {
@@ -12,13 +14,16 @@ const Portfolio = () => {
     const [Coins, setCoins] = useState<CoinType[]>([])
     const [verified, setVerified] = useState(true)
     const [coinChains, setcoinChains] = useState([])
+    const [category, setCategory] = useState("ALL CHAINS")
 
-    const update_coins = (coinChainsArr: any) => {
+    const update_coins = (coinChainsArr: any, category: string) => {
         let coins_array: CoinType[] = [];
         for (let chain of coinChainsArr) {
-            for (let coin of chain.token_holdings) {
-                if (coin.is_verified === verified)
-                    coins_array.push(coin)
+            if (category === "ALL CHAINS" || chain.chain_id === category){
+                for (let coin of chain.token_holdings) {
+                    if (coin.is_verified === verified)
+                        coins_array.push(coin)
+                }
             }
         }
         console.log(coins_array)
@@ -29,7 +34,7 @@ const Portfolio = () => {
         get_coins().then(
                 (response) => {
                     setcoinChains(response.data.record.chain_portfolios)
-                    update_coins(response.data.record.chain_portfolios)
+                    update_coins(response.data.record.chain_portfolios, category)
                 }
             )
     }
@@ -39,11 +44,18 @@ const Portfolio = () => {
     }, [])
 
     useEffect(() => {
-        update_coins(coinChains)
+        update_coins(coinChains, category)
     }, [verified])
+
+    useEffect(() => {
+        update_coins(coinChains, category)
+    }, [category])
 
     return (
         <View>
+            <View style={styles.allChainContainer}>
+                <AllChainsComponent coinChains={coinChains} setCategory={setCategory}/>
+            </View>
             <LoadWalletComponent coinChains={coinChains}/>
             <View style={styles.middleContainer}>
                 <View style={styles.lastUpdatedContainer}>
@@ -58,7 +70,7 @@ const Portfolio = () => {
                     <Text style={styles.verifiedCoinText}>Only Verified Coins</Text>
                 </View>
             </View>
-            <View style={{height: "77.5vh"}}>
+            <View style={{height: "61.5vh"}}>
                 <View style={styles.coinsContainer}>
                 {
                     Coins.map((coin: CoinType, index) => (
@@ -74,6 +86,11 @@ const Portfolio = () => {
 export default Portfolio
 
 const styles = StyleSheet.create({
+    allChainContainer:{
+        position: "absolute",
+        zIndex: 1,
+        right: 139
+    },
     middleContainer: {
         flex: 1,
         flexDirection: 'row',
