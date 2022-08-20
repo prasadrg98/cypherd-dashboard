@@ -73,7 +73,7 @@ function BottomTabNavigator() {
                 component={Browser}
                 options={({ navigation }: RootTabScreenProps<'Browser'>) => ({
                     title: 'Browser',
-                    tabBarIcon: ({ color }) => <FontAwesome5 name="firefox-browser" size={24} color="black" />
+                    tabBarIcon: ({ color }) => <FontAwesome5 name="firefox-browser" size={30} color="black" />
                 })}
             />
             <BottomTab.Screen
@@ -81,7 +81,7 @@ function BottomTabNavigator() {
                 component={Portfolio}
                 options={({ navigation }: RootTabScreenProps<'Portfolio'>) => ({
                     title: 'Portfolio',
-                    tabBarIcon: ({ color }) => <Feather name="pie-chart" size={24} color="black" />
+                    tabBarIcon: ({ color }) => <Feather name="pie-chart" size={30} color="black" />
                 })}
             />
             <BottomTab.Screen
@@ -89,7 +89,7 @@ function BottomTabNavigator() {
                 component={Shortcuts}
                 options={({ navigation }: RootTabScreenProps<'Shortcuts'>) => ({
                     title: 'Shortcuts',
-                    tabBarIcon: ({ color }) => <FontAwesome5 name='sitemap' size={24} color="black"></FontAwesome5>
+                    tabBarIcon: ({ color }) => <FontAwesome5 name='sitemap' size={30} color="black"></FontAwesome5>
                 })}
             />
             <BottomTab.Screen
@@ -97,7 +97,7 @@ function BottomTabNavigator() {
                 component={Options}
                 options={({ navigation }: RootTabScreenProps<'Options'>) => ({
                     title: 'Options',
-                    tabBarIcon: ({ color }) => <Ionicons name="options" size={24} color="black" />
+                    tabBarIcon: ({ color }) => <Ionicons name="options" size={30} color="black" />
                 })}
             />
 
