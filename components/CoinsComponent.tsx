@@ -58,10 +58,14 @@ const styles = StyleSheet.create({
     coinTotal:{
         textAlign: "right",
         fontSize: 13,
-        fontWeight: "bold"
+        fontWeight: "bold",
+        fontSize: 17,
+        paddingTop: 7,
+        paddingBottom: 7
     },
     coinPrice:{
         textAlign: "right",
         color: "#b1b1b1",
+        paddingBottom: 10
     }
 })

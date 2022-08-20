@@ -44,23 +44,7 @@ const Portfolio = () => {
 
     return (
         <View>
-<View style={styles.middleContainer}>
-                <View style={styles.lastUpdatedContainer}>
-                    <Text>Last Updated: 4 Mins Ago</Text>
-                </View>
-                <View style={styles.checkboxContainer}>
-                    <Checkbox
-                        status={verified ? 'checked' : 'unchecked'}
-                        onPress={() => { setVerified(!verified) }}
-                        color="black"
-                    />
-                    <Text style={styles.verifiedCoinText}>Only Verified Coins</Text>
-                </View>
-            </View>
-
-
-
-
+            <LoadWalletComponent/>
             <View style={styles.middleContainer}>
                 <View style={styles.lastUpdatedContainer}>
                     <Text>Last Updated: 4 Mins Ago</Text>
@@ -94,7 +78,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         paddingTop: "10px",
-        paddingBottom: "20px",
+        paddingBottom: "10px",
         justifyContent: "space-between",
         borderBottomColor: "lightgray",
         borderBottomWidth: 2,
