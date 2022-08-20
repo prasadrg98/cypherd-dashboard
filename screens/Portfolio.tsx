@@ -59,7 +59,7 @@ const Portfolio = () => {
             <LoadWalletComponent coinChains={coinChains}/>
             <View style={styles.middleContainer}>
                 <View style={styles.lastUpdatedContainer}>
-                    <Text>Last Updated: 4 Mins Ago</Text>
+                    <Text>Last Updated: 1 Mins Ago</Text>
                 </View>
                 <View style={styles.checkboxContainer}>
                     <Checkbox

@@ -34,6 +34,7 @@ export const AllChainsComponent = ({coinChains, setCategory}: any) => {
                 placeholder={'ALL CHAINS'}
                 value={value}
                 onChange={(value)=>setChainCategory(value)}
+                containerStyle={{backgroundColor:'#f5c35a'}}
                 
                 ></Dropdown>
     </View>

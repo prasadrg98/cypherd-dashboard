@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
         height: "50px",
         width: "50px",
         borderRadius: 100,
+        marginTop: 5
         
     },
     coinName:{
@@ -67,13 +68,5 @@ const styles = StyleSheet.create({
         textAlign: "right",
         color: "#b1b1b1",
         paddingBottom: 10
-    },
-    logoSuffixImage:{
-        // position: 'absolute',
-        height: 20,
-        width: 20,
-        left: 38,
-        bottom: 8,
-        borderRadius: 100,
-       }
+    }
 })
